@@ -1,0 +1,170 @@
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.visually-hidden {
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute;
+} 
+
+div.hidden {
+  display: none;
+} 
+
+@font-face {
+  font-family: OpenSans;
+  src: url(../fonts/OpenSans-Regular.woff);
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: OpenSans;
+  src: url(../fonts/OpenSans-Bold.woff);
+  font-weight: 700;
+  font-style: normal;
+}
+
+.main-wrapper, .trend-section-wrapper, .craft-section-wrapper, .footer, .popup {
+  font-family: OpenSans, sans-serif;
+  color: #0f0d0e;
+}
+
+.popup {
+  position: fixed;
+  height: 100vh;  
+  width: 100vw;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-container {
+  position: relative;
+}
+
+.close-button {
+  display: block; 
+  height: 18px;
+  width: 18px;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;  
+
+  position: absolute;
+  top: -25px;
+  right: 0; 
+
+  background-image: url(../svg/form-x.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.feedback-form {
+  padding: 47px 30px 55px;
+  background-color: white;
+  max-width: 390px;
+}
+
+.form-hint {
+  display: block;
+  margin: 23px 0 8px;
+  font-size: 13px;
+}
+
+.radio-button {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.radio-text:before {
+ content: "";
+ display: inline-block;
+ background-image: url(../svg/form-empty-circle.svg);
+ height: 18px;
+ width: 18px;
+ background-repeat: no-repeat;
+ background-size: 18px;
+ vertical-align: middle;
+ margin-right: 5px;
+}
+
+.radio-button:checked ~ .radio-text:before {
+ background-image: url(../svg/form-circle.svg);
+}
+
+.radio-text {
+  font-size: 13px;
+  margin-right: 15px;
+}
+
+select.field {
+  background-image: url(../svg/form-arrows.svg);
+  background-size: 10px auto;
+  background-repeat: no-repeat;
+  background-position: right 13px center;
+  margin-bottom: 30px;
+}
+
+textarea.field {
+  min-height: 131px;
+  min-width: 100%;
+  max-width: 100%;
+  padding: 17px;
+}
+
+.feedback-button {
+  width: 100%;
+  margin-top: 25px;
+}
+
+.header {
+  background-color: #000000;
+  background-image: url("../images/banner-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  
+  position: relative;
+  z-index: 0;
+  
+  padding-top: 30px;
+  padding-bottom: 125px;
+  font-family: OpenSans, sans-serif;
+}
+
+.header:after, .trend-card-wrapper:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000000;
+  opacity: 0.6;
+  
+  z-index: -1;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 180px;
+}
